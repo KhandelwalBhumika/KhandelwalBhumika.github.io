@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    
+    <div class="video-bg">  
+        <video width="100%" height="100%" muted autoplay loop>  
+         <source src="https://assets.codepen.io/344846/cm.mp4" type="video/mp4">  
+        </video>  
+       </div>  
+       <div class="target-feedback">
+        <div class="row">
+            <div class="column">
+                <h2>Thank You!</h2>
+            </div>
+            <div class="column">
+                <div class="row">
+                    <div class="column">
+                        <h6>Name - </h6>
+                        <h6>Email - </h6>
+                        <h6>Phone No. - </h6>
+                        <h6>Message - </h6>
+                    </div>
+                    <div class="column">
+                        <h6 id="name"></h6>
+                        <h6 id="email"></h6>
+                        <h6 id="phoneNumber"></h6>
+                        <h6 id="message"></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="desc">  -->
+        <!-- <h2>Thank You!</h2>
+        <h6><u>Contact Me:</u><br>
+            Email: khandelwalbhumika@gmail.com<br>
+            Phone Number: +91-9680364149
+        </h6> -->
+        <!-- </div> -->
+       </div>
+</body>
+
+<script>
+    const updateText = (id, text) => {
+        console.log('updateText', id, text)
+        document.getElementById(id).innerText = text;
+    }
+
+    addEventListener('DOMContentLoaded', (event) => {
+       const feedback = JSON.parse(localStorage.getItem('feedback'));
+       if (!feedback) {
+        window.location.href = 'index.html'
+        return;
+       }
+       Object.keys(feedback).forEach(key => updateText(key, feedback[key]));
+    });
+</script>
+
+</html>
