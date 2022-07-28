@@ -12,44 +12,19 @@ form.addEventListener('submit', (e) => {
     const phoneNumberValue = phoneNumber.value.trim();
     const messageValue = message.value.trim();
 
-    // if (checkNameAndMessage(nameValue)) {
-    //     name.parentElement.className = 'form-control success';
-    //   } 
-    //   else {
-    //     name.parentElement.className = 'form-control fail';
-    //   }
-
     if (!checkNameAndMessage(nameValue)) {
       name.parentElement.className = 'form-control fail';
       return;
     }
-
-  // if (checkEmail(emailValue)) {
-  //   email.parentElement.className = 'form-control success';
-  // } else {
-  //   email.parentElement.className = 'form-control fail';
-  // }
 
   if (!checkEmail(emailValue)) {
     email.parentElement.className = 'form-control fail';
     return;
   }
 
-  // if (checkPhoneNumber(phoneNumberValue)) {
-  //   phoneNumber.parentElement.className = 'form-control success';
-  // } else {
-  //   phoneNumber.parentElement.className = 'form-control fail';
-  // }
-
   if (!checkPhoneNumber(phoneNumberValue)) {
     phoneNumber.parentElement.className = 'form-control fail';
   } 
-
-  // if (messageValue) {
-  //   message.parentElement.className = 'form-control success';
-  // } else {
-  //   message.parentElement.className = 'form-control fail';
-  // }
 
   if (!messageValue) {
     message.parentElement.className = 'form-control fail';

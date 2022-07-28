@@ -1,9 +1,6 @@
 body {
-    /* background-image: url("https://source.unsplash.com/900x400?stars"); */
     background-image: url('galaxy.avif');
-    /* height: 100%;
-    width: 100%; */
-    background-position: center; /* Center the image */
+    background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   }
@@ -11,13 +8,6 @@ body {
 * {
   box-sizing: border-box;
 }
-/* 
-body {
-  background: #6d988d;
-  font-size: 18px;
-  font-family: 'Roboto', sans-serif;
-  color: #8d8d8d;
-} */
 
 .container {
   height: 100vh;
